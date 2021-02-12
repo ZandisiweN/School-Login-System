@@ -1,196 +1,226 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-
-    background-color:mintcream;
+body {
+  background-color: mintcream;
+}
+header .content .logo-image a img {
+  margin: auto;
 }
 /* HOME PAGE */
 
-
-/*Logo*/
-.main-image img{
-    width: 180px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-   display: inline;
-   
+.main-page {
+  display: flex;
+  flex-direction: row;
+}
+/* navigation bar */
+.navbar {
+  background-image: linear-gradient(rgb(24, 52, 83), rgb(138, 158, 179));
+  height: 100vh;
+  width: 18%;
+}
+ul {
+  list-style-type: none;
 }
 
-
-/*navigation bar*/
-.navbar{
-
-    list-style-type: none;
-    background-color: rgb(55, 82, 110);
-    background-image: linear-gradient(rgb(24, 52, 83), rgb(138, 158, 179));
-    /* position: fixed; */
-    /* height: 100%;
-    width: 15%; */
-    /* overflow: auto; */
-
-}
-
-li a {
-    text-decoration: none;
-    display: block;
-    color:white;
-    padding: 16px 18px;
+.navbar ul li a {
+  list-style-type: none;
+  text-decoration: none;
+  display: block;
+  font-size: larger;
+  color: white;
+  padding: 16px 18px;
 
 }
 /*Change the link color on hover*/
 
 li a.active {
-    background-color:rgb(196, 34, 34);
-    color: white;
-  }
+  background-color: rgb(196, 34, 34);
+  color: white;
+}
 
 li a:hover:not(.active) {
-    background-color: rgb(58, 57, 57);
-    color:white;}
+  background-color: rgb(58, 57, 57);
+  color: white;
+}
 
-    h1{ 
-        text-align: center;
-        font-family: 'Quicksand', sans-serif;
-        margin-top: 0px;
-        padding: 30px;
-    }
+/* Content */
 
-    .warning img.beWarned{
-        width: 80px;
-        height: auto;
-        float: left;
-        padding: 10px;
-        
-    }
+.content {
+  width: 82%;
+  height: 100vh;
+}
 
-   
-    .warning{
-        border:3px solid rgb(58, 56, 56);
-        background-color: white;
-        transition: width 2s;
-        border-radius: 15px 0;
-        padding:15px;
-        display:block;
-        margin-left: 250px;
-        margin-right: 100px;
-        margin-top: 70px;
-        color: red;
-    }
+/* Logo */
+.logo-image {
+  width: 100%;
+  height: 15vh;
+}
+.logo-image img {
+  width: 14vw;
+  margin: auto;
+  display: block;
+}
 
-        /*signup page*/
-    .form-wrap { 
-            line-height: 1.8;
-        }
+/* Warning */
+#welcome-warning h1 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
+  font-weight: bolder;
+}
 
-           .container{ 
-            font-family: 'Raleway', sans-serif;
-            margin:30px auto;
-            max-width: 450px;
-            padding: 20px;
-           float: none;
-            
-        }
-       
-        .form-wrap{
-            background-color: rgb(55, 82, 110);
-            padding: 15px 25px;
-            color: white;
-            
-        }
-        .form-wrap h1,
-        .form-wrap p{
-            text-align: center;
-        }
-        .form-wrap .form-group{
-            margin-top: 15px;
+.warning p {
+  line-height: 1.4;
+  text-align: justify;
+  font-size: 19px;
+}
+.warning img.beWarned {
+  width: 150px;
+  height: auto;
+  float: left;
+  padding: 10px;
+  padding-top: 20px;
+}
 
-        }
-        .form-wrap .form-group label{
-            display: block;
-            color:white;
-        }
-        .form-wrap .form-group input{
-            width:100%;
-            padding:10px;
-            border: #ddd 1px solid;
-            border-radius: 3px;
-        }
-        .form-wrap button{
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            color: white;
-            background:rgb(163, 48, 48);
-            cursor: pointer;
+#welcome-warning {
+  margin-top: 120px;
+}
 
-        }
-        .form-wrap button:hover{
-            background:rgb(247, 97, 97);
-        }
-        .form-wrap .bottom-text{
-            font-size: 13px;
-            margin-top: 20px;
-        }
-        footer{
-            text-align: center;
-            margin-top: 10px;
-            
-        }
-        
+.warning {
+  border: 3px solid rgb(58, 56, 56);
+  background-color: white;
+  transition: width 2s;
+  border-radius: 15px 0;
+  padding: 15px;
+  display: block;
+  margin-top: 70px;
+  margin-left: 115px;
+  margin-right: 60px;
+  /* margin: 70px auto; */
+  color: red;
+}
 
-   
-        .avatar-icon{
-            width:100px;
-            height: auto;
-            padding: 20px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+/*signup page & Login pages*/
+.form-wrap {
+  line-height: 1.8;
+  margin-top: 100px;
+  background-color: rgb(55, 82, 110);
+  padding: 15px 25px;
+  color: white;
+}
 
-            
-     }
+.container {
+  /* font-family: 'Raleway', sans-serif; */
 
-     input{
-      width: 100px;
-      margin: 10px 20px;
+  margin: 30px auto;
+  max-width: 450px;
+  padding: 20px;
+  float: none;
+}
 
-     }
+.form-wrap h1,
+.form-wrap p {
+  text-align: center;
+}
+.form-wrap .form-group {
+  margin-top: 15px;
+}
+.form-wrap .form-group label {
+  display: block;
+  color: white;
+}
+.form-wrap .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 3px;
+}
+.form-wrap button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  background: rgb(163, 48, 48);
+  cursor: pointer;
+}
+.form-wrap button:hover {
+  background: rgb(247, 97, 97);
+}
+.form-wrap .bottom-text {
+  font-size: 13px;
+  margin-top: 20px;
+}
 
-     button{
-         display: block;
-         width: 100%;
-         margin: 15px;
+.avatar-icon {
+  width: 100px;
+  height: auto;
+  padding: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-     }
+input {
+  width: 100px;
+  margin: 10px 20px;
+}
 
-     
-     span:hover{
-         cursor: pointer;
-     }
+button {
+  display: block;
+  width: 100%;
+  margin: 15px;
+}
 
-     /* admin page */
-    .admin .icons{
-            width: 15px;
-            height: auto;
-    }
-    
+span:hover {
+  cursor: pointer;
+}
 
-     
+/* admin page */
+.admin .icons {
+  width: 15px;
+  height: auto;
+}
 
-     
-        
-    
-    
-    
-    
+.table-container table {
+  width: 90%;
+  display: block;
+  border-collapse: collapse;
+  margin: 100px auto;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table-container thead tr {
+  background-image: linear-gradient(rgb(24, 52, 83), rgb(138, 158, 179));
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+.table-container th,
+.table-container td {
+  padding: 12px 15px;
+}
+.table-container tbody tr td {
+  border-bottom: 1px solid #dddddd;
+  background-color: white;
+}
+.table-container tbody tr td:nth-of-type(even) {
+  background-color: #dce5e1;
+}
 
-    
-    
+/* Admin-page */
+.flex-container{
+  display: flex;
+  justify-content: space-around;
 
-    
+}
